@@ -1,0 +1,6 @@
+  # WRITE BANER TO BEGIN
+  banner:
+   location: classpath:/banner/banner.txt
+   
+  
+  
