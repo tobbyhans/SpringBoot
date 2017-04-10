@@ -2,15 +2,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1"/>
-<title>Insert title here</title>
+<title>form</title>
 </head>
 <body>
   
-  <form action="#" th:action ="@{/example3/addperson}" th:object ="${person}" method="post"></form>
-  <p>Name: <input type ="text" th:fiel="*{name}" /></p>
-  <p>Age: <input type ="number" th:fiel="*{age}" /></p>
+  <form action="#" th:action ="@{/example3/addperson}" th:object ="${person}" method="post">
+  <p>Name: <input type ="text" th:field="*{name}" /></p>
+  <p>Age : <input type ="number" th:field="*{age}" /></p>
   <p><input type ="submit" value = "submit" /></p>
-  
-
+ </form>
 </body>
 </html>
