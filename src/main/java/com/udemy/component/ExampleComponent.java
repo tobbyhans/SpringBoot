@@ -10,7 +10,7 @@ public class ExampleComponent {
 	private static final Log LOG =LogFactory.getLog(ExampleComponent.class);
 
 	public void sayhello(){
-		LOG.info("example for tazaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		LOG.info("example for taza.....");
 		
 	}
 	
