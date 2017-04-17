@@ -1,17 +1,18 @@
 package com.udemy.controller;
 
-import static org.assertj.core.api.Assertions.setAllowComparingPrivateFields;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.omg.CORBA.PRIVATE_MEMBER;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.udemy.component.ExampleComponent;
 import com.udemy.model.Person;
 
 @Controller
@@ -19,10 +20,17 @@ import com.udemy.model.Person;
 public class ExampleController {
 
 	public static final String EXAMPLE_VIEW = "people";
+	
+	@Autowired
+	@Qualifier("ExampleComponent")
+	
+	private ExampleComponent exampleComponent ;
+	
 
 	// PRIMERA FORMA REDIRECCIONES
 	@GetMapping("/exampleString")
-	public String exampleString(Model model) {
+		public String exampleString(Model model) {
+		exampleComponent.sayhello();
 		model.addAttribute("people",getPeople());
 		return EXAMPLE_VIEW;
 
