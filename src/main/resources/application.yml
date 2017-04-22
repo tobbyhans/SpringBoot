@@ -2,5 +2,11 @@
   banner:
    location: classpath:/banner/banner.txt
    
+   # WRITE ERROR POR DEFECTO DE APACHE
+  server:
+    error:
+      whitelabel:
+        enabled : false
+   
   
   
