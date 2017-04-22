@@ -2,11 +2,11 @@
   banner:
    location: classpath:/banner/banner.txt
    
-   # WRITE ERROR POR DEFECTO DE APACHE
+   # WRITE ERROR POR DEFECTO DE APACHE false  Y POR DEFECTO DE SPRING EN true
   server:
     error:
       whitelabel:
-        enabled : false
+        enabled : true
    
   
   
