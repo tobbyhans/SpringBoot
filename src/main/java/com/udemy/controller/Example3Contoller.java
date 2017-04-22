@@ -34,6 +34,7 @@ public class Example3Contoller {
 	@GetMapping("/showform")
 	public String showForm(Model model) {
 		model.addAttribute("person", new Person());
+		int i = 4/0;
 		return FORM_VIEW;
 
 	}
