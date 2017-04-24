@@ -20,6 +20,7 @@ import com.udemy.services.ExampleService;
 public class ExampleController {
 
 	public static final String EXAMPLE_VIEW = "people";
+	
 
 	@Autowired
 	@Qualifier("exampleService")
