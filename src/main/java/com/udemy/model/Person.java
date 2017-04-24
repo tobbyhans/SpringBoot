@@ -29,5 +29,10 @@ public class Person {
 	// INICIALIZAR SIN DATOS CONTRUCTOR EN BLANCO
 	public Person() {
 	}
+// generate to string para los logs
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
 
 }
