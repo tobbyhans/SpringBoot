@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 
 public class Person {
 	@NotNull
-	@Size(min= 2, max=6)
+	@Size(min= 2, max=25)
 	private String name;
 	
 	@NotNull
