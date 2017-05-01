@@ -58,6 +58,7 @@ public class Example3Contoller {
 		
 		if(bindingResult.hasErrors()) {
 			mav.setViewName(FORM_VIEW);
+			
 		}else{
 			mav.setViewName(RESUL_VIEW);
 		mav.addObject("person", person);
