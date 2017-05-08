@@ -14,7 +14,7 @@ import com.udemy.entity.Course;
 	//Consultas con jpareposytory
 	 public abstract Course findByPrice(int price);
 	 
-	 public abstract Course findByNameAndprice(String name , int price);
+	 public abstract Course findpriceAndname(int price ,String name );
 	 
 	 public abstract List<Course>  findByNameOrderByHours(String name);
 

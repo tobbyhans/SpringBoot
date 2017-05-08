@@ -27,7 +27,7 @@ public class ExampleController {
 	private ExampleService exampleService;
 	
 	@Autowired
-	@Qualifier("ExampleComponent")
+	@Qualifier("exampleComponent")
 	
 	private ExampleComponent exampleComponent ;
 	
