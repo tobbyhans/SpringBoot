@@ -1,14 +1,13 @@
-package com.udemy.repository;
+ package com.udemy.repository;
 
+ import java.io.Serializable;
 
-import java.io.Serializable;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.udemy.entity.Course;
 
+ @Repository("CourseJpaRepository")
+ public interface CourseJpaRepository extends JpaRepository<Course, Serializable>{
 
-@Repository("CourseJpaRepository")
-public interface CourseJpaRepository <Course extends Serializable>{
-
-	
-}
+ }
