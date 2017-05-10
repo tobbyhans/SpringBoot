@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1"/>
+<meta charset="UTF-8" />
 <title>Course</title>
 </head>
 <body>
-hola
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Hours</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="course : ${courses}">
+				<th><span th:text="${course.name}"></span></th>
+				<th><span th:text="${course.description}"></span></th>
+				<th><span th:text="${course.price}"></span></th>
+				<th><span th:text="${course.hours}"></span></th>
+			</tr>
+
+		</tbody>
+
+	</table>
 </body>
 </html>
