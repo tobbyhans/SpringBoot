@@ -15,7 +15,7 @@ import com.udemy.entity.Course;
 import com.udemy.services.CourseService;
 
 @Controller
-@RequestMapping("/course")
+@RequestMapping("/courses")
 public class CourseController {
 	
 	private static final String COURSES_VIEW = "courses";
@@ -38,7 +38,7 @@ public class CourseController {
 	public String  addCourses(@ModelAttribute("course") Course course){
 		LOG.info("Call  : " + "addCourses()"+  "--param: " +  course.toString());
 			courseService.addCourse(course);
-				return "redirect:/course/listcourses";
+				return "redirect:/courses/listcourses";
 	}
 
 }

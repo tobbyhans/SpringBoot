@@ -8,16 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-
 import com.udemy.entity.Course;
 import com.udemy.repository.CourseJpaRepository;
 import com.udemy.services.CourseService;
 
-
 @Service("courseServiceImp")
 public class CourseServiceImp implements CourseService {
-	
-	private static final Log LOG =LogFactory.getLog(CourseServiceImp.class);
+
+	private static final Log LOG = LogFactory.getLog(CourseServiceImp.class);
 
 	// creamos una instancia de jparepository
 	@Autowired
@@ -26,13 +24,13 @@ public class CourseServiceImp implements CourseService {
 
 	@Override
 	public List<Course> listAllCourses() {
-    LOG.info("Call  : " + "listAllCourses()");
+		LOG.info("Call  : " + "listAllCourses()");
 		return courseJpaRepository.findAll();
 	}
 
 	@Override
 	public Course addCourse(Course course) {
-		 LOG.info("Call  : " + "addCourse()");
+		LOG.info("Call  : " + "addCourse()");
 		return courseJpaRepository.save(course);
 	}
 
