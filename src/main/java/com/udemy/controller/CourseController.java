@@ -30,6 +30,8 @@ public class CourseController {
 	public ModelAndView listAllCourses(){
 		LOG.info("Call  : " + "listAllCourses()");
 		ModelAndView mav = new  ModelAndView(COURSES_VIEW);
+		//creamos un objeto vacio
+		mav.addObject("course", new Course());
 		mav.addObject("courses", courseService.listAllCourses());
 		return mav;
 	}
