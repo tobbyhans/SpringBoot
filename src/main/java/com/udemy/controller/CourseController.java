@@ -37,7 +37,7 @@ public class CourseController {
 	}
 	
 	@PostMapping("/addcourse")
-	public String  addCourses(@ModelAttribute("course") Course course){
+	public String  addCourse(@ModelAttribute("course") Course course){
 		LOG.info("Call  : " + "addCourses()"+  "--param: " +  course.toString());
 			courseService.addCourse(course);
 				return "redirect:/courses/listcourses";
